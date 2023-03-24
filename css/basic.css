@@ -36,12 +36,12 @@ header h1 a {
 
 #gnb { 
   padding-left: 250px;
-  border: 1px solid red; 
+  /* border: 1px solid red;  */
 }
 
 #gnb > ul { /* 수정 */
   position: relative; 
-  border: 1px solid orange; 
+  /* border: 1px solid orange;  */
 }
 #gnb > ul > li { /* 부분삭제 */
   float: left; 
