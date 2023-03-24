@@ -1,0 +1,311 @@
+/* basic.css */
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Caveat&display=swap');
+@import url('https://fonts.cdnfonts.com/css/akrobat');
+
+body { font-family: Verdana, Geneva, Tahoma, sans-serif; } 
+
+.inner { 
+  position: relative;
+  width: 1180px;
+  margin: auto;
+}
+
+/* header */
+header { 
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background: #343436;
+  z-index: 100;
+} 
+header ul::after  { display:block; content: ""; clear:both; }
+
+header h1 { 
+  position: absolute;
+  top: 25px; left: 0; 
+}
+header h1 a { 
+  width: 118px; height: 44px;
+  font-size: 0;
+  display: block;
+  /* = text-indent: -9999px; */
+  background: url("../img/logo_white_type_02.png");
+}
+
+#gnb { 
+  padding-left: 250px;
+  border: 1px solid red; 
+}
+
+#gnb > ul { /* 수정 */
+  position: relative; 
+  border: 1px solid orange; 
+}
+#gnb > ul > li { /* 부분삭제 */
+  float: left; 
+  margin: 0 15px;
+}
+#gnb > ul > li > a {  /* 수정 */
+  display: block;
+  color: #fff;
+  /* font-size: 20px;
+  font-weight: 500;
+  line-height: 100px; */
+  font: 500 20px / 100px 'Barlow Condensed', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* #gnb > ul > li:hover > .sub { display: block; } */
+/* #gnb > ul > li:hover > a:after {
+  width:100%;
+} */
+/* #gnb > ul > li > a::after {
+  position:absolute; content:''; top:70px; left:0;
+  width:0%; height:3px;
+  background:#BE161E;
+  transition:0.3s;
+} */
+
+.bar { /* 추가 */
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #BE161E;
+  transition: .5s ease-out;
+}
+
+.sub { /* 수정 */
+  display: none;
+  position: absolute;
+  margin-left: -10px;
+  background: rgba(0, 0, 0, .5);
+  padding: 15px 20px;
+}
+.sub > li { margin: 10px 0; } 
+.sub > li > a {
+  color: #fff;
+  font-size: 15px;
+  white-space: nowrap; /* width 고정하지 않고 글씨 줄바꿈되도록 함 */
+}
+.sub > li:hover > a { color: #ff202b; }
+
+
+.global-menu {
+  position: absolute;
+  top: 45px;
+  right: 0;
+}
+.global-menu li {
+  float: left;
+  padding-left: 20px;
+}
+.global-menu a {
+  display: block;
+  color: #999;
+  font-size: 13px;
+}
+.join {}
+.join a { 
+  background-color: #666; 
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: -10px;
+}
+
+/* visual */
+#visual {
+  width: 100%;
+  min-width: 1180px;
+  height: 900px;
+  margin-top: 100px;
+  overflow: hidden;
+}
+#visual .slider {
+  position: relative;
+  width: 1920px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* 화면 크기를 줄여도 img의 가운데만 보이도록 설정 */
+}
+
+/* main */
+main { height: 1000px; }
+section {  }
+.main-product { padding-top: 150px; }
+.main-product > .inner { 
+  height: 620px; 
+}
+
+.product-image { 
+  width: 310px; 
+  padding-top: 90px;
+}
+.product-link { 
+  position: absolute;
+  top: 0; right: 0;
+  /* display: block; */
+  width: 480px;
+  height: 620px;
+  background: url("../img/20190108172841884005.jpg");
+}
+
+.product-text { 
+  position: absolute;
+  top: 70px; left: 400px;
+  width: 400px;
+}
+  .en-name {
+    font: 700 80px / 1.2 "Barlow Condensed", sans-serif;
+    letter-spacing: 1.3px;
+  }
+  .ko-name {
+    font-size: 23px;
+    font-weight: bold;
+    padding: 10px 0 40px;
+  }
+  .info {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #666;
+  }
+
+
+/* section benefit */
+.benefit {}
+.benefit-tomato {
+  width: 375px;
+  height: 442px;
+  background: url("../img/obj_01.jpg");
+  margin-left: 180px;
+}
+.benefit-contents {
+  height: 520px;
+  background: url("../img/main_benefit_visual.jpg");
+  margin-top: -120px;
+  padding-top: 80px;
+}
+
+/* 내가짠코드
+.benefit {}
+.benefit h3 { 
+  text-align: center; 
+  font: 700 60px / 1.2 "Barlow Condensed", sans-serif;
+  color: #fff;
+}
+.benefit .h3-info {
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+.benefit ul {}
+.benefit ul::after { display: block; content: ""; clear: both; }
+.benefit li {
+  float: left;
+  width: 350px;
+  height: 100px;
+}
+.benefit a {
+  color: #fff;
+}
+
+.benefit span {
+  display: block;
+  text-align: center;
+}
+.benefit .icon-name {
+  color: fff;
+  font: 600 30px / 1.2 "Barlow Condensed", sans-serif;
+}
+.benefit .icon-info {
+} */
+
+
+/* 강사님이랑 같이 짠 코드 */
+.benefit {
+  color: #fff;
+  text-align: center; 
+}
+.benefit h3 {
+  font: 600 55px / 1.5 "Barlow Condensed", sans-serif;
+  letter-spacing: 2px;
+}
+.benefit .h3-info {
+  margin-top: 10px;
+  opacity: .7;
+}
+.benefit ul { margin-top: 60px; }
+.benefit ul::after { display: block; content: ""; clear: both; }
+.benefit li {
+  float: left;
+  width: 33.3%;
+  height: 100px;
+}
+.benefit a {}
+.benefit span { 
+  display: block; 
+  color: #fff;
+  /* margin-top: 10px; */
+}
+.benefit .icon-name {
+  color: fff;
+  font: 600 30px "Barlow Condensed", sans-serif;
+  margin-top: 35px;
+}
+.benefit .icon-info {
+  opacity: .7;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+
+/* section reward */
+.reward {
+  margin-top:70px;  
+  padding-left:350px;
+}
+.reward-title {
+  position: absolute;
+  top: 20px; left: 0;
+  width: 280px;
+  height: 260px;
+  border: 5px solid #000;
+}
+  .text-data {
+    background: #fff;
+    position: absolute;
+    top: -5px; left: -5px;
+    width: 200px;
+    height: 240px;
+  }
+  .text-data h3 {
+    font: 600 30px / 1 "Barlow Condensed", sans-serif;
+    letter-spacing: 3px;
+  }
+  .text-data h3 span {
+    display: block;
+    font-size: 55px;
+    letter-spacing: 5px;
+    margin-top: 20px;
+  }
+  .text-data p {
+    margin: 20px 0;
+    line-height: 22px;
+    color: #666;
+  }
+  .text-data a {
+    font-size: 12px;
+    padding: 10px 20px;
+    color: #fff;
+    background: #000;
+  }
+.reward ol { 
+  height: 300px; 
+  background: lightblue;
+}
